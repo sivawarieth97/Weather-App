@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <br><br>
+    <div style="width: 25%; margin: 0 auto">
+        <form method="post" action="/">
+            <input type="text" name="city" placeholder="Your City"><br><br>
+            <center><input type="submit" class="btn btn-dark" value="Get Weather" style="right: 10px; margin: 0  auto"></center>
+            
+        </form>
+        <br>
+        <% if(w!=null) {%>
+            <p class="text-secondary text-center"> <%= w %></p> 
+            <p class="text-secondary text-center"> <%=desc %><br> <img src="<%=icon%>"></p>
+        <%} else if(e!=null){%>
+            <p class="text-secondary text-center"> <%= e %></p>
+        <%}%>
+
+
+        
+        </div>
+    
+</body>
+</html>
